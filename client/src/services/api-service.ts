@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://localhost:5024',
+  baseURL: 'http://localhost:5024',
   timeout: 5000,
   headers: {
     'Content-Type': 'application/json',
@@ -10,7 +10,7 @@ const api = axios.create({
 });
 
 const fetchAnimals = async () => {
-  const response = await api.get<AnimalsModel[]>('/animals');
+  const response = await api.get<AnimalModel[]>('/animals');
 
   return response.data;
 };

@@ -1,4 +1,4 @@
-type AnimalsModel = {
+type AnimalModel = {
   id: string,
   name: string,
   type: {
