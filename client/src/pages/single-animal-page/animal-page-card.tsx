@@ -16,7 +16,6 @@ const AnimalPageCard: React.FC<AnimalPageCardProps> = ({
   name,
   type,
   age,
-  images,
 }) => {
   const navigate = useNavigate();
 
