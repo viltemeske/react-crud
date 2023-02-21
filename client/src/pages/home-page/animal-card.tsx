@@ -22,7 +22,13 @@ const AnimalCard: React.FC<AnimalCardProps> = ({
 
   return (
     <Styled.AnimalCardBox>
-      <Img src={images[0]} alt="" sx={{ aspectRatio: '1', width: 0.75, border: '1px solid black' }} />
+      <Img
+        src={images[0]}
+        alt=""
+        sx={{
+          aspectRatio: '1', width: 0.75, border: '1px solid black', borderRadius: '5%',
+        }}
+      />
       <Styled.AnimalCardContent>
         <Box sx={{ flexGrow: 1, padding: 1 }}>
           <Typography variant="subtitle2">

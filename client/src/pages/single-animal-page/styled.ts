@@ -14,9 +14,8 @@ export const AnimalPageCardContent = styled(Stack)(({ theme }) => ({
 export const AnimalPageCardBox = styled(Stack)(({ theme }) => ({
   margin: theme.spacing(2),
   padding: theme.spacing(2),
-  border: '1px solid black',
   boxShadow: theme.shadows[12],
-  width: '50%',
+  width: '100%',
   height: 'auto',
   display: 'flex',
   flexDirection: 'column',

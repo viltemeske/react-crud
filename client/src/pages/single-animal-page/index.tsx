@@ -1,8 +1,15 @@
 import React from 'react';
-import { Box } from '@mui/material';
+import {
+  Box,
+} from '@mui/material';
 import routes from 'navigation/routes';
 import { useParams, Navigate } from 'react-router-dom';
 import ApiService from 'services/api-service';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+import Img from 'components/ui/img';
+import { EffectCards } from 'swiper';
 import AnimalPageCard from './animal-page-card';
 
 const SingleAnimalPage = () => {
@@ -22,8 +29,30 @@ const SingleAnimalPage = () => {
   if (animal === undefined) return null;
 
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-      <AnimalPageCard {...animal} />
+    <Box sx={{
+      display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
+    }}
+    >
+
+      <Box sx={{
+        width: '50%',
+        height: 'auto',
+      }}
+      >
+        <AnimalPageCard {...animal} />
+        <Swiper
+          effect="cards"
+          grabCursor
+          modules={[EffectCards]}
+          className="mySwiper"
+        >
+          {animal.images.map((img) => (
+            <SwiperSlide key={img}>
+              <Img src={img} sx={{ width: 1, height: 1 }} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Box>
     </Box>
   );
 };
