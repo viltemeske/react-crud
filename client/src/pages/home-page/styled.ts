@@ -32,7 +32,6 @@ export const AnimalCardBox = styled(Stack)(({ theme }) => ({
   paddingTop: theme.spacing(3),
   border: '1px solid black',
   boxShadow: theme.shadows[12],
-  borderRadius: '3%',
   backgroundColor: 'grey',
   display: 'flex',
   flexDirection: 'column',

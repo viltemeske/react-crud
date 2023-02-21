@@ -10,7 +10,7 @@ import {
   Button,
 } from '@mui/material';
 import PetsOutlinedIcon from '@mui/icons-material/PetsOutlined';
-import DeleteIcon from '@mui/icons-material/Delete';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 const AnimalFormPage = () => (
@@ -23,7 +23,7 @@ const AnimalFormPage = () => (
     <Paper
       component="form"
       elevation={6}
-      sx={{ p: 3, width: (theme) => ({ xs: 1, sm: theme.breakpoints.values.sm }) }}
+      sx={{ p: 3, width: (theme) => ({ xs: 1, sm: theme.breakpoints.values.sm }), border: '1px solid black' }}
     >
       <Stack sx={{ gap: 2, alignItems: 'center' }}>
         <PetsOutlinedIcon sx={{ fontSize: 60, color: 'primary.main' }} />
@@ -68,7 +68,7 @@ const AnimalFormPage = () => (
                 endAdornment: (
                   <InputAdornment position="end">
                     <IconButton>
-                      <DeleteIcon color="error" />
+                      <CloseOutlinedIcon color="error" />
                     </IconButton>
                   </InputAdornment>
                 ),
@@ -83,7 +83,7 @@ const AnimalFormPage = () => (
                 endAdornment: (
                   <InputAdornment position="end">
                     <IconButton>
-                      <DeleteIcon color="error" />
+                      <CloseOutlinedIcon color="error" />
                     </IconButton>
                   </InputAdornment>
                 ),

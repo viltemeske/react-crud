@@ -11,6 +11,7 @@ import 'swiper/css/effect-cards';
 import Img from 'components/ui/img';
 import { EffectCards } from 'swiper';
 import AnimalPageCard from './animal-page-card';
+import * as Styled from './styled';
 
 const StyledSwiper = styled(Swiper)({
   width: '75%',
@@ -38,12 +39,7 @@ const SingleAnimalPage = () => {
       display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
     }}
     >
-
-      <Box sx={{
-        width: '50%',
-        height: 'auto',
-      }}
-      >
+      <Styled.AnimalSwiperBox>
         <AnimalPageCard {...animal} />
         <StyledSwiper
           effect="cards"
@@ -57,7 +53,7 @@ const SingleAnimalPage = () => {
             </SwiperSlide>
           ))}
         </StyledSwiper>
-      </Box>
+      </Styled.AnimalSwiperBox>
     </Box>
   );
 };

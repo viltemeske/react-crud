@@ -26,7 +26,7 @@ const AnimalCard: React.FC<AnimalCardProps> = ({
         src={images[0]}
         alt=""
         sx={{
-          aspectRatio: '1', width: 0.75, border: '1px solid black', borderRadius: '5%',
+          aspectRatio: '1', width: 0.75, border: '1px solid black',
         }}
       />
       <Styled.AnimalCardContent>
