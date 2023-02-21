@@ -9,9 +9,9 @@ import { useNavigate } from 'react-router-dom';
 import routes from 'navigation/routes';
 import * as Styled from './styled';
 
-type AnimalCardProps = AnimalModel;
+type AnimalPageCardProps = AnimalModel;
 
-const AnimalCard: React.FC<AnimalCardProps> = ({
+const AnimalPageCard: React.FC<AnimalPageCardProps> = ({
   id,
   name,
   type,
@@ -21,9 +21,16 @@ const AnimalCard: React.FC<AnimalCardProps> = ({
   const navigate = useNavigate();
 
   return (
-    <Styled.AnimalCardBox>
-      <Img src={images[0]} alt="" sx={{ aspectRatio: '1', width: 0.75, border: '1px solid black' }} />
-      <Styled.AnimalCardContent>
+    <Styled.AnimalPageCardBox>
+      <Button
+        color="secondary"
+        variant="contained"
+        sx={{ mt: 4 }}
+        onClick={() => navigate(routes.HomePage)}
+      >
+        Grįžti
+      </Button>
+      <Styled.AnimalPageCardContent>
         <Box sx={{ flexGrow: 1, padding: 1 }}>
           <Typography variant="subtitle2">
             ID:
@@ -46,18 +53,11 @@ const AnimalCard: React.FC<AnimalCardProps> = ({
             {age}
           </Typography>
         </Box>
-        <Button
-          color="secondary"
-          variant="contained"
-          sx={{ mt: 4, border: '1px solid black' }}
-          onClick={() => navigate(routes.SingleAnimalPage.createLink(id))}
-        >
-          Peržiūrėti
-        </Button>
-      </Styled.AnimalCardContent>
 
-    </Styled.AnimalCardBox>
+      </Styled.AnimalPageCardContent>
+
+    </Styled.AnimalPageCardBox>
   );
 };
 
-export default AnimalCard;
+export default AnimalPageCard;

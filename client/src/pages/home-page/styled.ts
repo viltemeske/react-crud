@@ -4,7 +4,7 @@ export const AnimalsGrid = styled('div')(({ theme }) => ({
   display: 'grid',
   gridTemplateColumns: 'repeat(1, 1fr)',
   gap: theme.spacing(2),
-  padding: theme.spacing(2),
+  paddingTop: theme.spacing(2),
   maxWidth: theme.breakpoints.values.xl,
   margin: 'auto',
   [theme.breakpoints.up('sm')]: {
@@ -29,12 +29,13 @@ export const AnimalCardContent = styled(Stack)(({ theme }) => ({
 }));
 
 export const AnimalCardBox = styled(Stack)(({ theme }) => ({
-  boxShadow: 4,
-  borderRadius: '5%',
+  paddingTop: theme.spacing(3),
+  border: '1px solid black',
+  boxShadow: theme.shadows[12],
+  borderRadius: '3%',
   backgroundColor: 'grey',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  padding: theme.spacing(3),
 }));

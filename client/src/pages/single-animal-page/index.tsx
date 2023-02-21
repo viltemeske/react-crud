@@ -3,6 +3,7 @@ import { Box } from '@mui/material';
 import routes from 'navigation/routes';
 import { useParams, Navigate } from 'react-router-dom';
 import ApiService from 'services/api-service';
+import AnimalPageCard from './animal-page-card';
 
 const SingleAnimalPage = () => {
   const { id } = useParams();
@@ -21,17 +22,8 @@ const SingleAnimalPage = () => {
   if (animal === undefined) return null;
 
   return (
-    <Box>
-      <Box component="pre">
-        {JSON.stringify(animal, null, 4)}
-      </Box>
-      <Box sx={{
-        width: 600,
-        height: 400,
-        margin: 'auto',
-        position: 'relative',
-      }}
-      />
+    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+      <AnimalPageCard {...animal} />
     </Box>
   );
 };
