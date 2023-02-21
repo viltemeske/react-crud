@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Box,
+  Box, styled,
 } from '@mui/material';
 import routes from 'navigation/routes';
 import { useParams, Navigate } from 'react-router-dom';
@@ -11,6 +11,11 @@ import 'swiper/css/effect-cards';
 import Img from 'components/ui/img';
 import { EffectCards } from 'swiper';
 import AnimalPageCard from './animal-page-card';
+
+const StyledSwiper = styled(Swiper)({
+  width: '75%',
+  height: '75%',
+});
 
 const SingleAnimalPage = () => {
   const { id } = useParams();
@@ -40,7 +45,7 @@ const SingleAnimalPage = () => {
       }}
       >
         <AnimalPageCard {...animal} />
-        <Swiper
+        <StyledSwiper
           effect="cards"
           grabCursor
           modules={[EffectCards]}
@@ -51,7 +56,7 @@ const SingleAnimalPage = () => {
               <Img src={img} sx={{ width: 1, height: 1 }} />
             </SwiperSlide>
           ))}
-        </Swiper>
+        </StyledSwiper>
       </Box>
     </Box>
   );

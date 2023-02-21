@@ -7,7 +7,7 @@ export const AnimalPageCardContent = styled(Stack)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
-  alignItems: 'center',
+  alignItems: 'left',
   fontFamily: 'Courier New, monospace',
 }));
 

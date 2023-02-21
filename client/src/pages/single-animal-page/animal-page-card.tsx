@@ -3,16 +3,16 @@ import {
   Box,
   Typography,
   Button,
+  Container,
 } from '@mui/material';
-import Img from 'components/ui/img';
 import { useNavigate } from 'react-router-dom';
 import routes from 'navigation/routes';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import * as Styled from './styled';
 
 type AnimalPageCardProps = AnimalModel;
 
 const AnimalPageCard: React.FC<AnimalPageCardProps> = ({
-  id,
   name,
   type,
   age,
@@ -21,21 +21,17 @@ const AnimalPageCard: React.FC<AnimalPageCardProps> = ({
 
   return (
     <Styled.AnimalPageCardBox>
-      <Button
-        color="secondary"
-        variant="contained"
-        sx={{ mt: 4 }}
-        onClick={() => navigate(routes.HomePage)}
-      >
-        Grįžti
-      </Button>
+      <Container sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'right' }}>
+        <Button
+          color="primary"
+          sx={{ mt: 1 }}
+          onClick={() => navigate(routes.HomePage)}
+        >
+          <CloseOutlinedIcon />
+        </Button>
+      </Container>
       <Styled.AnimalPageCardContent>
         <Box sx={{ flexGrow: 1, padding: 1 }}>
-          <Typography variant="subtitle2">
-            ID:
-            {' '}
-            {id}
-          </Typography>
           <Typography sx={{ fontSize: '1.15rem', fontWeight: 600 }}>
             Vardas:
             {' '}
