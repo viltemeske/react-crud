@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import NavbarLayout from 'components/layouts/navbar-layout';
 import HomePage from 'pages/home-page/index';
 import SingleAnimalPage from 'pages/single-animal-page/index';
+import AnimalFormPage from 'pages/animal-form-page/index';
 import routes from './routes';
 
 const router = createBrowserRouter([
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: routes.SingleAnimalPage.path,
         element: <SingleAnimalPage />,
+      },
+      {
+        path: routes.AnimalFormPage,
+        element: <AnimalFormPage />,
       },
     ],
   },

@@ -2,6 +2,7 @@ const singleAnimalPageRoot = '/animal/';
 
 const routes = {
   HomePage: '/',
+  AnimalFormPage: '/animal-form',
   SingleAnimalPage: {
     path: `${singleAnimalPageRoot}:id`,
     createLink: (id: string | number) => `${singleAnimalPageRoot}${id}`,
