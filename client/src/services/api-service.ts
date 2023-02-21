@@ -15,8 +15,15 @@ const fetchAnimals = async () => {
   return response.data;
 };
 
+const fetchAnimal = async (id: string | number) => {
+  const response = await api.get<AnimalModel>(`/animals/${id}`);
+
+  return response.data;
+};
+
 const ApiService = {
   fetchAnimals,
+  fetchAnimal,
 };
 
 export default ApiService;
