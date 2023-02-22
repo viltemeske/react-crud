@@ -8,6 +8,9 @@ import {
   Button,
 } from '@mui/material';
 import PetsOutlinedIcon from '@mui/icons-material/PetsOutlined';
+import ApiService from 'services/api-service';
+import { useNavigate } from 'react-router-dom';
+import routes from 'navigation/routes';
 import ImagesField from './images-field';
 import * as Styled from './styled';
 import { getAnimalFormValues } from './helpers';
@@ -15,13 +18,20 @@ import { getAnimalFormValues } from './helpers';
 const AnimalFormPage = () => {
   const formRef = React.useRef<undefined | HTMLFormElement>(undefined);
 
+  const postAnimalData = async (animalData: Omit<AnimalModel, 'id'>) => {
+    await ApiService.createAnimal(animalData);
+  };
+
+  const navigate = useNavigate();
+
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
+    navigate(routes.HomePage);
 
     try {
       const values = getAnimalFormValues(formRef.current);
-      console.log('Vykdomas sukūrimas');
       console.log(values);
+      postAnimalData(values);
     } catch (error) {
       if (error instanceof Error) {
         alert(error.message);
