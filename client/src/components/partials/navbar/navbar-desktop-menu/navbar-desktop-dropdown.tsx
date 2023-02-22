@@ -45,7 +45,12 @@ const NavbarDesktopDropdown: React.FC<NavbarDesktopDropdownProps> = ({
         <Paper sx={{ width: 200 }} elevation={4}>
           <MenuList>
             {links.map(({ text, to }) => (
-              <NavbarDesktopDropdownLink key={to} to={to}>{text}</NavbarDesktopDropdownLink>
+              <NavbarDesktopDropdownLink
+                key={to}
+                to={to}
+              >
+                {text}
+              </NavbarDesktopDropdownLink>
             ))}
           </MenuList>
         </Paper>

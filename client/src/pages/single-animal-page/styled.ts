@@ -1,4 +1,4 @@
-import { styled, Stack } from '@mui/material';
+import { styled, Stack, Box } from '@mui/material';
 
 export const AnimalPageCardContent = styled(Stack)(({ theme }) => ({
   flexGrow: 1,
@@ -55,4 +55,11 @@ export const AnimalSwiperBox = styled(Stack)(({ theme }) => ({
   [theme.breakpoints.up('xl')]: {
     width: '50%',
   },
+}));
+
+export const OutsideBox = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
 }));

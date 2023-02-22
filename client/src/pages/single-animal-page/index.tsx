@@ -1,7 +1,6 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import {
-  Box, styled,
-} from '@mui/material';
+import { styled } from '@mui/material';
 import routes from 'navigation/routes';
 import { useParams, Navigate } from 'react-router-dom';
 import ApiService from 'services/api-service';
@@ -35,10 +34,7 @@ const SingleAnimalPage = () => {
   if (animal === undefined) return null;
 
   return (
-    <Box sx={{
-      display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
-    }}
-    >
+    <Styled.OutsideBox>
       <Styled.AnimalSwiperBox>
         <AnimalPageCard {...animal} />
         <StyledSwiper
@@ -54,7 +50,7 @@ const SingleAnimalPage = () => {
           ))}
         </StyledSwiper>
       </Styled.AnimalSwiperBox>
-    </Box>
+    </Styled.OutsideBox>
   );
 };
 export default SingleAnimalPage;

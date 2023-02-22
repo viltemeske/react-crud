@@ -13,7 +13,6 @@ import PetsOutlinedIcon from '@mui/icons-material/PetsOutlined';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import CameraAltOutlinedIcon from '@mui/icons-material/CameraAltOutlined';
-import * as Styled from './styled';
 
 const AnimalFormPage = () => (
   <Stack sx={{

@@ -1,6 +1,6 @@
 import React from 'react';
 import ApiService from 'services/api-service';
-import { Box, Button, Container } from '@mui/material';
+import { Button, Container } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import routes from 'navigation/routes';
 import * as Styled from './styled';
