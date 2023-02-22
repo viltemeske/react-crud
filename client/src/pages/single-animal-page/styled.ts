@@ -16,7 +16,12 @@ export const AnimalPageCardBox = styled(Stack)(({ theme }) => ({
   padding: theme.spacing(2),
   boxShadow: theme.shadows[12],
   border: '1px solid black',
-  backgroundColor: 'white',
+  backgroundColor: theme.palette.grey[200],
+  cursor: 'pointer',
+  '&:hover': {
+    backgroundColor: theme.palette.grey[100],
+    boxShadow: theme.shadows[12],
+  },
   width: '100%',
   height: 'auto',
   display: 'flex',
@@ -35,6 +40,6 @@ export const AnimalSwiperBox = styled(Stack)(({ theme }) => ({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  backgroundColor: 'grey',
+  backgroundColor: theme.palette.grey[400],
   border: '1px solid black',
 }));

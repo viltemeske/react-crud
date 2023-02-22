@@ -31,8 +31,13 @@ export const AnimalCardContent = styled(Stack)(({ theme }) => ({
 export const AnimalCardBox = styled(Stack)(({ theme }) => ({
   paddingTop: theme.spacing(3),
   border: '1px solid black',
-  boxShadow: theme.shadows[12],
-  backgroundColor: 'grey',
+  boxShadow: theme.shadows[6],
+  backgroundColor: theme.palette.grey[300],
+  cursor: 'pointer',
+  '&:hover': {
+    backgroundColor: theme.palette.grey[200],
+    boxShadow: theme.shadows[12],
+  },
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',

@@ -55,7 +55,7 @@ const AnimalCard: React.FC<AnimalCardProps> = ({
         <Button
           color="secondary"
           variant="contained"
-          sx={{ mt: 4, border: '1px solid black' }}
+          sx={{ mt: 4 }}
           onClick={() => navigate(routes.SingleAnimalPage.createLink(id))}
         >
           Peržiūrėti

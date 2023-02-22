@@ -18,15 +18,13 @@ const HomePage = () => {
 
   return (
     <Container sx={{ mt: 2, mb: 2 }}>
-      <Box>
-        <Button
-          color="primary"
-          variant="outlined"
-          onClick={() => navigate(routes.AnimalFormPage)}
-        >
-          Pridėti naują
-        </Button>
-      </Box>
+      <Button
+        color="secondary"
+        variant="contained"
+        onClick={() => navigate(routes.AnimalFormPage)}
+      >
+        Pridėti naują
+      </Button>
       <Styled.AnimalsGrid>
         {animals.map((animal) => <AnimalCard key={animal.id} {...animal} />)}
       </Styled.AnimalsGrid>
