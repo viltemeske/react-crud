@@ -34,7 +34,7 @@ export const AnimalSwiperBox = styled(Stack)(({ theme }) => ({
   margin: theme.spacing(2),
   padding: theme.spacing(2),
   boxShadow: theme.shadows[12],
-  width: '50%',
+  width: '90%',
   height: 'auto',
   display: 'flex',
   flexDirection: 'column',
@@ -42,4 +42,17 @@ export const AnimalSwiperBox = styled(Stack)(({ theme }) => ({
   alignItems: 'center',
   backgroundColor: theme.palette.grey[400],
   border: '1px solid black',
+  maxWidth: theme.breakpoints.values.xl,
+  [theme.breakpoints.up('sm')]: {
+    width: '85%',
+  },
+  [theme.breakpoints.up('md')]: {
+    width: '75%',
+  },
+  [theme.breakpoints.up('lg')]: {
+    width: '65%',
+  },
+  [theme.breakpoints.up('xl')]: {
+    width: '50%',
+  },
 }));
