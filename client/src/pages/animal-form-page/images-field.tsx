@@ -34,7 +34,7 @@ const ImagesField = () => {
           <TextField
             sx={{ border: '1px solid black' }}
             label="Nuotrauka"
-            name="image"
+            name="images"
             fullWidth
             variant="filled"
             size="small"

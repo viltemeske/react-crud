@@ -21,9 +21,16 @@ const fetchAnimal = async (id: string | number) => {
   return response.data;
 };
 
+const createAnimal = async (animalData: Omit<AnimalModel, 'id'>) => {
+  const response = await api.post<AnimalModel>('/animals', animalData);
+
+  return response.data;
+};
+
 const ApiService = {
   fetchAnimals,
   fetchAnimal,
+  createAnimal,
 };
 
 export default ApiService;
