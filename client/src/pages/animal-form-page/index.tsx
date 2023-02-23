@@ -17,21 +17,16 @@ import { getAnimalFormValues } from './helpers';
 
 const AnimalFormPage = () => {
   const formRef = React.useRef<undefined | HTMLFormElement>(undefined);
-
-  const postAnimalData = async (animalData: Omit<AnimalModel, 'id'>) => {
-    await ApiService.createAnimal(animalData);
-  };
-
   const navigate = useNavigate();
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    navigate(routes.HomePage);
 
     try {
       const values = getAnimalFormValues(formRef.current);
-      console.log(values);
-      postAnimalData(values);
+      await ApiService.createAnimal(values);
+
+      navigate(routes.HomePage);
     } catch (error) {
       if (error instanceof Error) {
         alert(error.message);
