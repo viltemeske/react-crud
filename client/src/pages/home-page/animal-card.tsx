@@ -9,7 +9,6 @@ import { useNavigate } from 'react-router-dom';
 import routes from 'navigation/routes';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import EditIcon from '@mui/icons-material/Edit';
-import AnimalFormPage from 'pages/animal-form-page';
 import * as Styled from './styled';
 
 type AnimalCardProps = AnimalModel & {
@@ -87,7 +86,6 @@ const AnimalCard: React.FC<AnimalCardProps> = ({
           Peržiūrėti
         </Button>
       </Styled.AnimalCardContent>
-
     </Styled.AnimalCardBox>
   );
 };

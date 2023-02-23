@@ -33,7 +33,7 @@ const ImagesField: React.FC<ImagesFieldProps> = ({ color, colorMain, defaultImag
   const [
     imgFieldsIds,
     setImgFieldsIds,
-  ] = React.useState<string[]>(defaultImages || initialIds);
+  ] = React.useState<string[]>((imgMap && Object.keys(imgMap)) || initialIds);
 
   const addImgField = () => setImgFieldsIds([...imgFieldsIds, createId()]);
   const removeImgField = (id: string) => {

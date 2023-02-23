@@ -15,7 +15,6 @@
       ]
     },
     {
-      "id": 2,
       "name": "Svarelis",
       "type": {
         "type": "Plėšrūnas",
@@ -26,7 +25,8 @@
         "https://images.theconversation.com/files/350865/original/file-20200803-24-50u91u.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
         "https://c8.alamy.com/zooms/9/7084f25861f44d8980f7abb212438aaf/pfnyt4.jpg",
         "https://cdn.pixabay.com/photo/2018/03/26/02/05/cat-3261420__340.jpg"
-      ]
+      ],
+      "id": 2
     },
     {
       "id": 3,
@@ -177,7 +177,8 @@
       "age": 1,
       "images": [
         "https://www.mypetsname.com/wp-content/uploads/2019/07/Names-for-a-Black-and-White-Cat.jpg",
-        "https://www.mypetsname.com/wp-content/uploads/2019/07/Names-for-a-Black-and-White-Cat.jpg"
+        "https://s36537.pcdn.co/wp-content/uploads/2018/03/Close-up-of-a-tuxedo-black-and-white-cat.jpg.optimal.jpg",
+        "https://rawznaturalpetfood.com/wp-content/uploads/tuxedo-cats.jpg"
       ],
       "id": 14
     }

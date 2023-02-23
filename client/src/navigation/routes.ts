@@ -22,6 +22,11 @@ const routes = {
   ...dynamicRoutes,
 } as const;
 
+// export type Routes = typeof routes;
+// export type RouteLink = {
+//   [Key in keyof Routes]: Routes[Key] extends string ? Routes[Key] : never
+// }[keyof Routes]; - alternatyvus sprendimas
+
 export type Routes = typeof routes;
 export type RouteLink = Routes[keyof Routes];
 

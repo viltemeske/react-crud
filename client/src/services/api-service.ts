@@ -27,8 +27,14 @@ const createAnimal = async (animalData: Omit<AnimalModel, 'id'>) => {
   return response.data;
 };
 
-const deleteAnimal = async (id: string) => {
+const deleteAnimal = async (id: string | number) => {
   await api.delete(`animals/${id}`);
+};
+
+const updateAnimal = async (id: string, animalData: Omit<AnimalModel, 'id'>) => {
+  const response = await api.put<AnimalModel[]>(`/animals/${id}`, animalData);
+
+  return response.data;
 };
 
 const ApiService = {
@@ -36,6 +42,7 @@ const ApiService = {
   fetchAnimal,
   createAnimal,
   deleteAnimal,
+  updateAnimal,
 };
 
 export default ApiService;

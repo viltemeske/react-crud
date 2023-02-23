@@ -1,5 +1,4 @@
 /* eslint-disable no-alert */
-/* eslint-disable no-console */
 import React from 'react';
 import {
   Stack,
@@ -19,7 +18,7 @@ import { getModeData } from './data';
 
 const AnimalFormPage = () => {
   const { id } = useParams();
-  const [animal, loadingHouseData] = useAnimal(id);
+  const [animal, loadingAnimalData] = useAnimal(id);
   const formRef = React.useRef<undefined | HTMLFormElement>(undefined);
   const navigate = useNavigate();
   const mode = id !== undefined ? 'edit' : 'create';
@@ -39,10 +38,8 @@ const AnimalFormPage = () => {
         await ApiService.createAnimal(values);
         navigate(routes.HomePage);
       } else {
-        // TODO: Atlikti atnaujinimo darbus ir po sukurimo, nuvesti į
-        // TODO: pagrindinį puslapį arba atnaujinto produkto puslapį
-        console.log('Vykdomas atnaujinimas');
-        console.log({ id, ...values });
+        await ApiService.updateAnimal(id as any, values);
+        navigate(routes.SingleAnimalPage.createLink(id as any));
       }
     } catch (error) {
       if (error instanceof Error) {
@@ -53,7 +50,7 @@ const AnimalFormPage = () => {
     }
   };
 
-  if (loadingHouseData) return null;
+  if (loadingAnimalData) return null;
 
   return (
     <Styled.PageLayout>
