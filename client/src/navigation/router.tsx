@@ -23,6 +23,10 @@ const router = createBrowserRouter([
         path: routes.AnimalFormPage,
         element: <AnimalFormPage />,
       },
+      {
+        path: routes.UpdateAnimalPage.path,
+        element: <AnimalFormPage />,
+      },
     ],
   },
 ]);

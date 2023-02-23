@@ -57,9 +57,9 @@ export const AnimalSwiperBox = styled(Stack)(({ theme }) => ({
   },
 }));
 
-export const OutsideBox = styled(Box)(({ theme }) => ({
+export const OutsideBox = styled(Box)({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-}));
+});

@@ -17,7 +17,7 @@ export const AnimalsGrid = styled('div')(({ theme }) => ({
     gridTemplateColumns: 'repeat(4, 1fr)',
   },
 }));
-export const AnimalCardContent = styled(Stack)(({ theme }) => ({
+export const AnimalCardContent = styled(Stack)({
   flexGrow: 1,
   width: '100%',
   display: 'flex',
@@ -25,7 +25,7 @@ export const AnimalCardContent = styled(Stack)(({ theme }) => ({
   justifyContent: 'center',
   alignItems: 'center',
   fontFamily: 'Courier New, monospace',
-}));
+});
 
 export const AnimalCardBox = styled(Stack)(({ theme }) => ({
   paddingTop: theme.spacing(7),

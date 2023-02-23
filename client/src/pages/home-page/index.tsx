@@ -7,20 +7,21 @@ import * as Styled from './styled';
 import AnimalCard from './animal-card';
 
 const HomePage = () => {
-  const [animals, setAnimals] = React.useState<AnimalModel[]>([]);
   const navigate = useNavigate();
-  React.useEffect(() => {
-    (async () => {
-      const fetchedAnimals = await ApiService.fetchAnimals();
-      setAnimals(fetchedAnimals);
-    })();
-  }, []);
+  const [animals, setAnimals] = React.useState<AnimalModel[]>([]);
 
   const onDelete = async (id: string) => {
     await ApiService.deleteAnimal(id);
     const fetchedAnimals = await ApiService.fetchAnimals();
     setAnimals(fetchedAnimals);
   };
+
+  React.useEffect(() => {
+    (async () => {
+      const fetchedAnimals = await ApiService.fetchAnimals();
+      setAnimals(fetchedAnimals);
+    })();
+  }, []);
 
   return (
     <Container sx={{ mt: 2, mb: 2 }}>

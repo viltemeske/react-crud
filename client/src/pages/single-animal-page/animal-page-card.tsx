@@ -48,9 +48,7 @@ const AnimalPageCard: React.FC<AnimalPageCardProps> = ({
             {age}
           </Typography>
         </Box>
-
       </Styled.AnimalPageCardContent>
-
     </Styled.AnimalPageCardBox>
   );
 };

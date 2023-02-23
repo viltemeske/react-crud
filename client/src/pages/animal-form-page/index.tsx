@@ -9,24 +9,41 @@ import {
 } from '@mui/material';
 import PetsOutlinedIcon from '@mui/icons-material/PetsOutlined';
 import ApiService from 'services/api-service';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import routes from 'navigation/routes';
+import useAnimal from 'hooks/use-animal';
 import ImagesField from './images-field';
 import * as Styled from './styled';
 import { getAnimalFormValues } from './helpers';
+import { getModeData } from './data';
 
 const AnimalFormPage = () => {
+  const { id } = useParams();
+  const [animal, loadingHouseData] = useAnimal(id);
   const formRef = React.useRef<undefined | HTMLFormElement>(undefined);
   const navigate = useNavigate();
+  const mode = id !== undefined ? 'edit' : 'create';
+  const {
+    title,
+    btnText,
+    color,
+    colorMain,
+  } = getModeData(mode);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
     try {
       const values = getAnimalFormValues(formRef.current);
-      await ApiService.createAnimal(values);
-
-      navigate(routes.HomePage);
+      if (mode === 'create') {
+        await ApiService.createAnimal(values);
+        navigate(routes.HomePage);
+      } else {
+        // TODO: Atlikti atnaujinimo darbus ir po sukurimo, nuvesti į
+        // TODO: pagrindinį puslapį arba atnaujinto produkto puslapį
+        console.log('Vykdomas atnaujinimas');
+        console.log({ id, ...values });
+      }
     } catch (error) {
       if (error instanceof Error) {
         alert(error.message);
@@ -35,6 +52,8 @@ const AnimalFormPage = () => {
       }
     }
   };
+
+  if (loadingHouseData) return null;
 
   return (
     <Styled.PageLayout>
@@ -45,8 +64,8 @@ const AnimalFormPage = () => {
           onSubmit={handleSubmit}
           ref={formRef}
         >
-          <PetsOutlinedIcon sx={{ fontSize: 60, color: 'primary.main' }} />
-          <Typography variant="h4" color="primary">Naujas gyvūnas</Typography>
+          <PetsOutlinedIcon sx={{ fontSize: 60, color: colorMain }} />
+          <Typography variant="h4" color={colorMain}>{title}</Typography>
           <TextField
             sx={{ border: '1px solid black' }}
             label="Vardas"
@@ -54,6 +73,8 @@ const AnimalFormPage = () => {
             fullWidth
             variant="filled"
             size="small"
+            color={color}
+            defaultValue={animal?.name}
           />
           <TextField
             sx={{ border: '1px solid black' }}
@@ -62,6 +83,8 @@ const AnimalFormPage = () => {
             fullWidth
             variant="filled"
             size="small"
+            color={color}
+            defaultValue={animal?.type.type}
           />
           <TextField
             sx={{ border: '1px solid black' }}
@@ -70,6 +93,8 @@ const AnimalFormPage = () => {
             fullWidth
             variant="filled"
             size="small"
+            color={color}
+            defaultValue={animal?.type.species}
           />
           <TextField
             sx={{ border: '1px solid black' }}
@@ -80,15 +105,17 @@ const AnimalFormPage = () => {
             fullWidth
             variant="filled"
             size="small"
+            color={color}
+            defaultValue={animal?.age}
           />
-          <ImagesField />
+          <ImagesField color={color} colorMain={colorMain} defaultImages={animal?.images} />
           <Button
             variant="contained"
-            color="primary"
+            color={color}
             size="large"
             type="submit"
           >
-            Sukurti
+            {btnText}
           </Button>
         </Stack>
       </Styled.Paper>

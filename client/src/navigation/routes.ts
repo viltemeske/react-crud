@@ -1,4 +1,5 @@
 const singleAnimalPageRoot = '/animal/';
+const updateAnimalPageRoot = '/update-animal/';
 
 const staticRoutes = {
   HomePage: '/',
@@ -9,6 +10,10 @@ const dynamicRoutes = {
   SingleAnimalPage: {
     path: `${singleAnimalPageRoot}:id`,
     createLink: (id: string | number) => `${singleAnimalPageRoot}${id}`,
+  },
+  UpdateAnimalPage: {
+    path: `${updateAnimalPageRoot}:id`,
+    createLink: (id: string | number) => `${updateAnimalPageRoot}${id}`,
   },
 } as const;
 

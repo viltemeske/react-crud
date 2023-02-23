@@ -7,7 +7,9 @@ import {
 import Img from 'components/ui/img';
 import { useNavigate } from 'react-router-dom';
 import routes from 'navigation/routes';
-import DeleteIcon from '@mui/icons-material/Delete';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import EditIcon from '@mui/icons-material/Edit';
+import AnimalFormPage from 'pages/animal-form-page';
 import * as Styled from './styled';
 
 type AnimalCardProps = AnimalModel & {
@@ -32,9 +34,18 @@ const AnimalCard: React.FC<AnimalCardProps> = ({
           color="secondary"
           size="small"
           sx={{ minWidth: 'initial', p: 0.5 }}
+          onClick={() => navigate(routes.UpdateAnimalPage.createLink(id))}
+        >
+          <EditIcon />
+        </Button>
+        <Button
+          variant="contained"
+          color="secondary"
+          size="small"
+          sx={{ minWidth: 'initial', p: 0.5 }}
           onClick={onDelete}
         >
-          <DeleteIcon />
+          <DeleteForeverIcon />
         </Button>
       </Styled.ActionButtons>
       <Img

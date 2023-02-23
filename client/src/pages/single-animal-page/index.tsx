@@ -3,12 +3,12 @@ import React from 'react';
 import { styled } from '@mui/material';
 import routes from 'navigation/routes';
 import { useParams, Navigate } from 'react-router-dom';
-import ApiService from 'services/api-service';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import Img from 'components/ui/img';
 import { EffectCards } from 'swiper';
+import useAnimal from 'hooks/use-animal';
 import AnimalPageCard from './animal-page-card';
 import * as Styled from './styled';
 
@@ -19,16 +19,7 @@ const StyledSwiper = styled(Swiper)({
 
 const SingleAnimalPage = () => {
   const { id } = useParams();
-  const [animal, setAnimal] = React.useState<undefined | AnimalModel>(undefined);
-
-  React.useEffect(() => {
-    if (id !== undefined) {
-      (async () => {
-        const fetchedAnimal = await ApiService.fetchAnimal(id);
-        setAnimal(fetchedAnimal);
-      })();
-    }
-  }, []);
+  const [animal] = useAnimal(id);
 
   if (id === undefined) return <Navigate to={routes.HomePage} />;
   if (animal === undefined) return null;
