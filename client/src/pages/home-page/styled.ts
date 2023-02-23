@@ -20,7 +20,6 @@ export const AnimalsGrid = styled('div')(({ theme }) => ({
 export const AnimalCardContent = styled(Stack)(({ theme }) => ({
   flexGrow: 1,
   width: '100%',
-  padding: theme.spacing(1, 2, 2),
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -29,7 +28,8 @@ export const AnimalCardContent = styled(Stack)(({ theme }) => ({
 }));
 
 export const AnimalCardBox = styled(Stack)(({ theme }) => ({
-  paddingTop: theme.spacing(3),
+  paddingTop: theme.spacing(7),
+  paddingBottom: theme.spacing(4),
   border: '1px solid black',
   boxShadow: theme.shadows[6],
   backgroundColor: theme.palette.grey[300],
@@ -42,4 +42,13 @@ export const AnimalCardBox = styled(Stack)(({ theme }) => ({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
+  position: 'relative',
+}));
+
+export const ActionButtons = styled('div')(({ theme }) => ({
+  position: 'absolute',
+  right: 10,
+  top: 10,
+  display: 'flex',
+  gap: theme.spacing(0.5),
 }));

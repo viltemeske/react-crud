@@ -176,34 +176,10 @@
       },
       "age": 1,
       "images": [
-        "https://www.mypetsname.com/wp-content/uploads/2019/07/Names-for-a-Black-and-White-Cat.jpg"
-      ],
-      "id": 13
-    },
-    {
-      "name": "Mikis",
-      "type": {
-        "type": "plėšrūnas",
-        "species": "katinas"
-      },
-      "age": 1,
-      "images": [
         "https://www.mypetsname.com/wp-content/uploads/2019/07/Names-for-a-Black-and-White-Cat.jpg",
         "https://www.mypetsname.com/wp-content/uploads/2019/07/Names-for-a-Black-and-White-Cat.jpg"
       ],
       "id": 14
-    },
-    {
-      "name": "Mikis",
-      "type": {
-        "type": "plėšrūnas",
-        "species": "katinas"
-      },
-      "age": 1,
-      "images": [
-        "https://www.mypetsname.com/wp-content/uploads/2019/07/Names-for-a-Black-and-White-Cat.jpg"
-      ],
-      "id": 15
     },
     {
       "name": "Mikis",

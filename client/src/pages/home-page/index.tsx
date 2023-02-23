@@ -16,6 +16,12 @@ const HomePage = () => {
     })();
   }, []);
 
+  const onDelete = async (id: string) => {
+    await ApiService.deleteAnimal(id);
+    const fetchedAnimals = await ApiService.fetchAnimals();
+    setAnimals(fetchedAnimals);
+  };
+
   return (
     <Container sx={{ mt: 2, mb: 2 }}>
       <Button
@@ -26,7 +32,13 @@ const HomePage = () => {
         Pridėti naują
       </Button>
       <Styled.AnimalsGrid>
-        {animals.map((animal) => <AnimalCard key={animal.id} {...animal} />)}
+        {animals.map((animal) => (
+          <AnimalCard
+            key={animal.id}
+            {...animal}
+            onDelete={() => onDelete(animal.id)}
+          />
+        ))}
       </Styled.AnimalsGrid>
     </Container>
   );
