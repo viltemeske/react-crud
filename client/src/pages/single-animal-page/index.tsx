@@ -28,6 +28,7 @@ const SingleAnimalPage = () => {
     <Styled.OutsideBox>
       <Styled.AnimalSwiperBox>
         <AnimalPageCard {...animal} />
+
         <StyledSwiper
           effect="cards"
           grabCursor

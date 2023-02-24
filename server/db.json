@@ -8,6 +8,7 @@
         "species": "Šuo"
       },
       "age": 3,
+      "rating": 5,
       "images": [
         "https://midwestbernedoodles.com/wp-content/uploads/bb-plugin/cache/daisy-square-square.jpeg",
         "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/curly-haired-dog-breeds-1576680305.jpg",
@@ -21,6 +22,7 @@
         "species": "katinas"
       },
       "age": 1,
+      "rating": 5,
       "images": [
         "https://images.theconversation.com/files/350865/original/file-20200803-24-50u91u.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
         "https://c8.alamy.com/zooms/9/7084f25861f44d8980f7abb212438aaf/pfnyt4.jpg",
@@ -36,6 +38,7 @@
         "species": "Asilas"
       },
       "age": 27,
+      "rating": 4.5,
       "images": [
         "https://media.istockphoto.com/id/478835580/photo/close-up-face-of-a-donkey.jpg?s=170667a&w=0&k=20&c=_T_hwRjkPgzdNwYX1_hDAQV7tfBS873q4O1nWq6g0MU=",
         "https://www.shutterstock.com/image-photo/isolated-old-donkey-pasture-summer-260nw-1722815659.jpg",
@@ -50,6 +53,7 @@
         "species": "Arklys"
       },
       "age": 23,
+      "rating": 4,
       "images": [
         "https://media.gettyimages.com/id/1190629233/photo/tiny-little-pony.jpg?s=612x612&w=gi&k=20&c=ent2DYRclA2oqPvY_Mvhah6j4pcf8Iznhd-SvlnxJBA=",
         "https://www.shutterstock.com/image-photo/white-pony-on-background-green-260nw-684193330.jpg",
@@ -64,6 +68,7 @@
         "species": "katinas"
       },
       "age": 1,
+      "rating": 4,
       "images": [
         "https://thumbs.dreamstime.com/b/black-cat-yellow-eyes-8341385.jpg",
         "https://thumbs.dreamstime.com/b/black-cat-portrait-sitting-sun-53230676.jpg",
@@ -78,6 +83,7 @@
         "species": "Arklys"
       },
       "age": 6,
+      "rating": 3.5,
       "images": [
         "https://i.etsystatic.com/5151863/r/il/a73f8e/429759083/il_570xN.429759083_9ccl.jpg",
         "https://t1.thpservices.com/previewimage/gallil/c2f5236a0b9af0e22f0292047387b6a3/ibr-3239702.jpg",
@@ -92,6 +98,7 @@
         "species": "Arklys"
       },
       "age": 27,
+      "rating": 4.5,
       "images": [
         "https://media.istockphoto.com/id/473060392/photo/funny-brown-horse-close-up-head.jpg?s=612x612&w=is&k=20&c=o0FqeXkysJ7-vr4pmrZ6RFFFg-GJQlZWOdDMuZbGtO0=",
         "https://previews.123rf.com/images/zuzule/zuzule1804/zuzule180400098/100732764-beautiful-brown-horse-running-in-freedom-on-the-grass.jpg",
@@ -106,6 +113,7 @@
         "species": "Šuo"
       },
       "age": 1,
+      "rating": 5,
       "images": [
         "https://www.k9magazine.com/wp-content/uploads/danny-black-square.jpg",
         "https://www.dylancollard.com/wp-content/uploads/2019/05/BlackDog_Bagheera02.jpg",
@@ -120,6 +128,7 @@
         "species": "Šuo"
       },
       "age": 11,
+      "rating": 3.5,
       "images": [
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTenkurt9E-qX_DBkmXOMUpxpAlFM612oEkdw&usqp=CAU",
         "https://www.purina.co.uk/sites/default/files/2022-07/German-Spitz-Klein.jpg?itok=bcaG6Zsn",
@@ -134,6 +143,7 @@
         "species": "Šuo"
       },
       "age": 0.3,
+      "rating": 5,
       "images": [
         "https://upload.wikimedia.org/wikipedia/commons/5/5c/Brown_puppy_%289899551176%29.jpg",
         "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2020%2F10%2F15%2Fchocolate-lab-puppy-503937116-2000.jpg",
@@ -148,6 +158,7 @@
         "species": "Avis"
       },
       "age": 2,
+      "rating": 4.5,
       "images": [
         "https://t3.ftcdn.net/jpg/00/49/14/88/360_F_49148820_VFeCBphN33sufLHcrjkzHWEKuohmc2Ex.jpg",
         "https://cdn.pixabay.com/photo/2016/11/13/21/46/sheep-1822137__340.jpg",
@@ -162,6 +173,7 @@
         "species": "Šuo"
       },
       "age": 8,
+      "rating": 4.5,
       "images": [
         "https://c8.alamy.com/comp/M276WK/swedish-vallhund-in-sweden-standing-in-grass-M276WK.jpg",
         "https://media.istockphoto.com/id/122945913/photo/swedish-vallhund-dog.jpg?s=612x612&w=0&k=20&c=vRreRA1_VC6MJAWEieuB-gouAUD3sFNJOovIU1dLXJM=",
@@ -175,12 +187,41 @@
         "species": "katinas"
       },
       "age": 1,
+      "rating": 4,
       "images": [
         "https://www.mypetsname.com/wp-content/uploads/2019/07/Names-for-a-Black-and-White-Cat.jpg",
         "https://s36537.pcdn.co/wp-content/uploads/2018/03/Close-up-of-a-tuxedo-black-and-white-cat.jpg.optimal.jpg",
         "https://rawznaturalpetfood.com/wp-content/uploads/tuxedo-cats.jpg"
       ],
       "id": 14
+    },
+    {
+      "name": "Micius",
+      "type": {
+        "type": "plėšrūnas",
+        "species": "katinas"
+      },
+      "age": 3,
+      "rating": 3,
+      "images": [
+        "https://s36537.pcdn.co/wp-content/uploads/2018/03/Close-up-of-a-tuxedo-black-and-white-cat.jpg.optimal.jpg",
+        "https://www.mypetsname.com/wp-content/uploads/2019/07/Names-for-a-Black-and-White-Cat.jpg",
+        "https://rawznaturalpetfood.com/wp-content/uploads/tuxedo-cats.jpg"
+      ],
+      "id": 16
+    },
+    {
+      "name": "Argas",
+      "type": {
+        "type": "plėšrūnas",
+        "species": "šuo"
+      },
+      "age": 5,
+      "rating": 3.5,
+      "images": [
+        "https://media.istockphoto.com/photos/crazy-looking-black-and-white-border-collie-dog-say-looking-intently-picture-id1213516345?b=1&k=20&m=1213516345&s=612x612&w=0&h=Nw0QSlgjmF5VUDCm67rlvW0mtLfbu0gqMruolP-PS-A="
+      ],
+      "id": 17
     }
   ]
 }

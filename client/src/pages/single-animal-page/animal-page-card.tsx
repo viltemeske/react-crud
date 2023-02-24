@@ -16,6 +16,7 @@ const AnimalPageCard: React.FC<AnimalPageCardProps> = ({
   name,
   type,
   age,
+  rating,
 }) => {
   const navigate = useNavigate();
 
@@ -24,7 +25,8 @@ const AnimalPageCard: React.FC<AnimalPageCardProps> = ({
       <Container sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'right' }}>
         <Button
           color="primary"
-          sx={{ mt: 1 }}
+          size="small"
+          sx={{ minWidth: 'initial', p: 0.5 }}
           onClick={() => navigate(routes.HomePage)}
         >
           <CloseOutlinedIcon />
@@ -47,6 +49,7 @@ const AnimalPageCard: React.FC<AnimalPageCardProps> = ({
             {' '}
             {age}
           </Typography>
+          <Styled.AnimalCardRating>{rating}</Styled.AnimalCardRating>
         </Box>
       </Styled.AnimalPageCardContent>
     </Styled.AnimalPageCardBox>

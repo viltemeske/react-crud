@@ -6,5 +6,6 @@ type AnimalModel = {
     species: string,
   }
   age: number,
+  rating: number,
   images: string[],
 };

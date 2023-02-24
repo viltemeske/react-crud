@@ -20,6 +20,7 @@ const AnimalCard: React.FC<AnimalCardProps> = ({
   name,
   type,
   age,
+  rating,
   images,
   onDelete,
 }) => {
@@ -76,6 +77,7 @@ const AnimalCard: React.FC<AnimalCardProps> = ({
             {' '}
             {age}
           </Typography>
+          <Styled.AnimalCardRating>{rating}</Styled.AnimalCardRating>
         </Box>
         <Button
           color="secondary"

@@ -15,6 +15,7 @@ import ImagesField from './images-field';
 import * as Styled from './styled';
 import { getAnimalFormValues } from './helpers';
 import { getModeData } from './data';
+import RatingField from './rating-field';
 
 const AnimalFormPage = () => {
   const { id } = useParams();
@@ -106,6 +107,7 @@ const AnimalFormPage = () => {
             defaultValue={animal?.age}
           />
           <ImagesField color={color} colorMain={colorMain} defaultImages={animal?.images} />
+          <RatingField defaultValue={animal?.rating} />
           <Button
             variant="contained"
             color={color}

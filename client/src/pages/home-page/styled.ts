@@ -52,3 +52,15 @@ export const ActionButtons = styled('div')(({ theme }) => ({
   display: 'flex',
   gap: theme.spacing(0.5),
 }));
+
+export const AnimalCardRating = styled('div')(({ theme }) => ({
+  display: 'inline-flex',
+  alignItems: 'flex-end',
+  fontSize: '1.3rem',
+  gap: '0.1em',
+  color: theme.palette.error.main,
+  fontWeight: 600,
+  '&:after': {
+    content: '"♥"',
+  },
+}));
