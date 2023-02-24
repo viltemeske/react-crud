@@ -199,10 +199,10 @@
       "name": "Micius",
       "type": {
         "type": "plėšrūnas",
-        "species": "katinas"
+        "species": "katinazas"
       },
-      "age": 3,
-      "rating": 3,
+      "age": 4,
+      "rating": 4,
       "images": [
         "https://s36537.pcdn.co/wp-content/uploads/2018/03/Close-up-of-a-tuxedo-black-and-white-cat.jpg.optimal.jpg",
         "https://www.mypetsname.com/wp-content/uploads/2019/07/Names-for-a-Black-and-White-Cat.jpg",
@@ -217,7 +217,7 @@
         "species": "šuo"
       },
       "age": 5,
-      "rating": 3.5,
+      "rating": 4.5,
       "images": [
         "https://media.istockphoto.com/photos/crazy-looking-black-and-white-border-collie-dog-say-looking-intently-picture-id1213516345?b=1&k=20&m=1213516345&s=612x612&w=0&h=Nw0QSlgjmF5VUDCm67rlvW0mtLfbu0gqMruolP-PS-A="
       ],

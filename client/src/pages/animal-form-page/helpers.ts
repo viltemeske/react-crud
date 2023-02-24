@@ -20,6 +20,10 @@ export const getAnimalFormValues = (form: HTMLFormElement | undefined): Omit<Ani
   if (typeof age !== 'string') throw new Error('Missing age');
   if (age.length < 1) throw new Error('age must have at least 1 number');
 
+  const rating = formData.get('rating');
+  if (typeof rating !== 'string') throw new Error('Missing rating');
+  if (rating.length < 1) throw new Error('rating must have at least 1 number');
+
   const images = formData.getAll('images');
   if (!isStringArray(images)) throw new Error('All images must be strings');
 
@@ -30,6 +34,7 @@ export const getAnimalFormValues = (form: HTMLFormElement | undefined): Omit<Ani
       species,
     },
     age: Number(age),
+    rating: Number(rating),
     images: images.filter((img) => img !== ''),
   };
 
