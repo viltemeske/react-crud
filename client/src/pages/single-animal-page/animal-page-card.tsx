@@ -35,19 +35,13 @@ const AnimalPageCard: React.FC<AnimalPageCardProps> = ({
       <Styled.AnimalPageCardContent>
         <Box sx={{ flexGrow: 1, padding: 1 }}>
           <Typography sx={{ fontSize: '1.15rem', fontWeight: 600 }}>
-            Vardas:
-            {' '}
-            {name}
+            {`Vardas: ${name}`}
           </Typography>
           <Typography variant="subtitle2">
-            Rūšis:
-            {' '}
-            {`${type.type}, ${type.species}`}
+            {`Rūšis: ${type.type}, ${type.species}`}
           </Typography>
           <Typography variant="subtitle2">
-            Amžius:
-            {' '}
-            {age}
+            {`Amžius: ${age}`}
           </Typography>
           <Styled.AnimalCardRating>{rating}</Styled.AnimalCardRating>
         </Box>
