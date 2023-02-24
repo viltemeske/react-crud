@@ -179,49 +179,6 @@
         "https://media.istockphoto.com/id/122945913/photo/swedish-vallhund-dog.jpg?s=612x612&w=0&k=20&c=vRreRA1_VC6MJAWEieuB-gouAUD3sFNJOovIU1dLXJM=",
         "https://www.thesprucepets.com/thmb/OOJSTyWjtZqot2jHbK2og-rpt6g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/swedish-vallhund-breed-profile-4177497-hero-57431dbe614743c8b6752018460b7949.jpg"
       ]
-    },
-    {
-      "name": "Mikis",
-      "type": {
-        "type": "plėšrūnas",
-        "species": "katinas"
-      },
-      "age": 1,
-      "rating": 4,
-      "images": [
-        "https://www.mypetsname.com/wp-content/uploads/2019/07/Names-for-a-Black-and-White-Cat.jpg",
-        "https://s36537.pcdn.co/wp-content/uploads/2018/03/Close-up-of-a-tuxedo-black-and-white-cat.jpg.optimal.jpg",
-        "https://rawznaturalpetfood.com/wp-content/uploads/tuxedo-cats.jpg"
-      ],
-      "id": 14
-    },
-    {
-      "name": "Micius",
-      "type": {
-        "type": "plėšrūnas",
-        "species": "katinazas"
-      },
-      "age": 4,
-      "rating": 4,
-      "images": [
-        "https://s36537.pcdn.co/wp-content/uploads/2018/03/Close-up-of-a-tuxedo-black-and-white-cat.jpg.optimal.jpg",
-        "https://www.mypetsname.com/wp-content/uploads/2019/07/Names-for-a-Black-and-White-Cat.jpg",
-        "https://rawznaturalpetfood.com/wp-content/uploads/tuxedo-cats.jpg"
-      ],
-      "id": 16
-    },
-    {
-      "name": "Argas",
-      "type": {
-        "type": "plėšrūnas",
-        "species": "šuo"
-      },
-      "age": 5,
-      "rating": 4.5,
-      "images": [
-        "https://media.istockphoto.com/photos/crazy-looking-black-and-white-border-collie-dog-say-looking-intently-picture-id1213516345?b=1&k=20&m=1213516345&s=612x612&w=0&h=Nw0QSlgjmF5VUDCm67rlvW0mtLfbu0gqMruolP-PS-A="
-      ],
-      "id": 17
     }
   ]
-}
+  }

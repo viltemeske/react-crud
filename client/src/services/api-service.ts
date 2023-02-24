@@ -32,7 +32,7 @@ const deleteAnimal = async (id: string | number) => {
 };
 
 const updateAnimal = async (id: string, animalData: Omit<AnimalModel, 'id'>) => {
-  const response = await api.put<AnimalModel[]>(`/animals/${id}`, animalData);
+  const response = await api.patch<AnimalModel[]>(`/animals/${id}`, animalData);
 
   return response.data;
 };
